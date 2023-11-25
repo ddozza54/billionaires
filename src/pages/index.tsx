@@ -17,7 +17,6 @@ export default function Home() {
       setBillionaires(result);
     })()
   }, [])
-  console.log(billionaires)
   return (
     <div
       className='flex flex-wrap bg-zinc-800'
@@ -27,7 +26,7 @@ export default function Home() {
             className='flex flex-col p-4'
             key={billionaire.id}>
             <Link href={`person/${billionaire.id}`}>
-              < img src={`${billionaire.squareImage}.png`} />
+              <img src={`${billionaire.squareImage}.png`} />
               <h4 className='text-white font-bold text-lg'>{billionaire.name}</h4>
               <span className='text-white '>{billionaire.netWorth}/{billionaire.industries}</span>
             </Link>
